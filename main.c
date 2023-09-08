@@ -19,7 +19,7 @@ int main (int ac ,char**argv)
         if (line == NULL)
         {
             if (isatty(STDIN_FILENO))
-            write(STDOUT_FILENO,"\n",1);
+                write(STDOUT_FILENO,"\n",1);
             return (status);
         }    
         

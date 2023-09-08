@@ -13,8 +13,8 @@ char **tokenizer(char *line)
 
     token = strtok(tmpp,DELIM);
     if (token == NULL)
-    {   free(line); line = NULL;
-        free(tmpp); tmpp = NULL;
+    {   free(line), line = NULL;
+        free(tmpp), tmpp = NULL;
         return(NULL); 
     }
     while (token)
@@ -22,23 +22,23 @@ char **tokenizer(char *line)
         count++;
         token = strtok(NULL, DELIM);
     }
-    free(tmpp); tmpp = NULL;
+    free(tmpp), tmpp = NULL;
 
     command = malloc(sizeof(char *) *(count + 1));
     if (!command)
     {
-        free(line);
+        free(line), line = NULL;
         return (NULL);
     }
 
     token = strtok(line,DELIM);
     while (token)
     {
-        command [i++] = token;
+        command [i] = _strdup (token);
         token = strtok(NULL, DELIM);
         i++;
     }
-    free(line); line =NULL;
+    free(line), line = NULL ;
     command[i] = NULL;
     return(command);
 }
