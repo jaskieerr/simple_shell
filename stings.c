@@ -11,7 +11,7 @@ char *_strdup(const char *str)
     int i, len = 0;
     if (str == NULL)
         return (NULL);
-    while (*str != "\0")
+    while (*str != '\0')
     {
         len++;
         str++;
@@ -30,7 +30,7 @@ char *_strdup(const char *str)
 */
 int _strcmp (char *s1, char *s2)
 {
-    int cmp;
+    int cmp = 0;
     
     cmp = (int) *s1 - (int) *s2;
 }

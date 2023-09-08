@@ -25,5 +25,5 @@ int _execute(char**command, char **argv)
         waitpid(child, &status, 0);
         freestrsarr(command);
     }
-    return(WEXITSTATUS(status))
+    return(WEXITSTATUS(status));
 }   
