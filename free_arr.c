@@ -1,9 +1,15 @@
 #include "shell.h"
-/*comment 
-goes
- here*/
-void  freestrsarr(char **ary)
-{   int i;
+
+/**
+ * freestrsarr - free array
+ * @ary: str array to be freed
+ *
+ *
+ */
+void freestrsarr(char **ary)
+{
+    int i;
+    
     if (!ary)
         return;
 
@@ -11,6 +17,8 @@ void  freestrsarr(char **ary)
     {
         free(ary[i]);
         ary[i] = NULL;
-    }    
-    free(ary),ary = NULL;
+    }
+    
+    free(ary);
+    ary = NULL;
 }

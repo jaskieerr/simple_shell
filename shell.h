@@ -13,7 +13,7 @@
 #define DELIM " \t\n"
 extern char **environ;
 void  freestrsarr(char **ary);
-int _execute(char**command, char **argv);
+int _execute(char **command, char **argv);
 char **tokenizer(char *line);
 char *read_line(void);
 char *_strdup(const char *str);
