@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * read_line - Reads string from the stdin.
+ * read_line - Reads string from the stdin
  *
  * Return: A ptr to allocated str containing the line
  *         NULL if shiitt went south

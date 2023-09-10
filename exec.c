@@ -5,7 +5,7 @@
  * @command: str arr of the cmd and its arguments.
  * @argv: str arr of args  passed  shell.
  *
- * Return: 0 if success, -1 if not
+ * Return: 0 if success, -1 if not.
  */
 int _execute(char **command, char **argv)
 {

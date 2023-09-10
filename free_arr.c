@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * freestrsarr - free array
- * @ary: str array to be freed
+ * freestrsarr - free array.
+ * @ary: str array to be freed.
  *
  *
  */

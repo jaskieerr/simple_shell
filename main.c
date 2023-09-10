@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * main - shell entry point
+ * main - shell entry point.
  * @ac: arg count.
- * @argv: argv as usual
+ * @argv: argv as usual.
  *
  * Return: Always returns 0.
  */

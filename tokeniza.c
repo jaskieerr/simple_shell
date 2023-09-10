@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * tokenizer - it tokenizes string huh
- * @line: str to be tokenized
+ * tokenizer - it tokenizes string huh.
+ * @line: str to be tokenized.
  *
- * Return: array of strs containing tokens, NULL if fail
+ * Return: array of strs containing tokens, NULL if fail.
  */
 char **tokenizer(char *line)
 {
