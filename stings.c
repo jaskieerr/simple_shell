@@ -1,117 +1,118 @@
 #include "shell.h"
 
 /**
- * _strdup - a function that Duplicate a string.
- * @str: string to duplicate.
+ * _strdup - Duplicate a string.
+ * @str: String to duplicate.
  *
- * Return: ptr to the duplicated string, NULL allocation failed.
+ * Return: Pointer to the duplicated string, NULL if allocation failed.
  */
 char *_strdup(const char *str)
 {
-    char *ptr;
-    int i, len = 0;
+	char *ptr;
+	int i, len = 0;
 
-    if (str == NULL)
-        return (NULL);
+	if (str == NULL)
+		return (NULL);
 
-    while (*str != '\0')
-    {
-        len++;
-        str++;
-    }
-    str = str - len;
-    ptr = malloc(sizeof(char) * (len + 1));
+	while (*str != '\0')
+	{
+		len++;
+		str++;
+	}
+	str = str - len;
+	ptr = malloc(sizeof(char) * (len + 1));
 
-    if (ptr == NULL)
-        return (NULL);
+	if (ptr == NULL)
+		return (NULL);
 
-    for (i = 0; i <= len; i++)
-        ptr[i] = str[i];
+	for (i = 0; i <= len; i++)
+		ptr[i] = str[i];
 
-    return (ptr);
+	return (ptr);
 }
 
 /**
  * _strcmp - Compare two strings.
- * @s1: first string.
- * @s2: second string.
+ * @s1: First string.
+ * @s2: Second string.
  *
- * Return: eehhh ,kinda depends.
+ * Return: The comparison result.
  */
 int _strcmp(char *s1, char *s2)
 {
-    int cmp;
+	int cmp;
 
-    cmp = (int)*s1 - (int)*s2;
+	cmp = (int)*s1 - (int)*s2;
 
-    while (*s1)
-    {
-        if (*s1 != *s2)
-            break;
-        s1++;
-        s2++;
-        cmp = (int)*s1 - (int)*s2;
-    }
+	while (*s1)
+	{
+		if (*s1 != *s2)
+			break;
+		s1++;
+		s2++;
+		cmp = (int)*s1 - (int)*s2;
+	}
 
-    return (cmp);
+	return (cmp);
 }
 
 /**
  * _strlen - Calculate the length of a string.
- * @s: str to be calculated
+ * @s: String to be calculated.
  *
- * Return: string length.
+ * Return: The length of the string.
  */
 int _strlen(char *s)
 {
-    int len = 0;
+	int len = 0;
 
-    while (s[len])
-        len++;
+	while (s[len])
+		len++;
 
-    return (len);
+	return (len);
 }
 
 /**
  * _strcat - Concatenate two strings.
- * @dest: destination string.
- * @src: source string.
+ * @dest: Destination string.
+ * @src: Source string.
  *
- * Return: destination string ptr.
+ * Return: Pointer to the destination string.
  */
 char *_strcat(char *dest, char *src)
 {
-    char *ptr = dest;
+	char *ptr = dest;
 
-    while (*ptr)
-        ptr++;
+	while (*ptr)
+		ptr++;
 
-    while (*src)
-    {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
-    *ptr = *src;
+	while (*src)
+	{
+		*ptr = *src;
+		ptr++;
+		src++;
+	}
+	*ptr = *src;
 
-    return (dest);
+	return (dest);
 }
+
 /**
- * _strcpy - Concatenate two strings.
- * @dest: destination string.
- * @src: source string.
+ * _strcpy - Copy a string.
+ * @dest: Destination string.
+ * @src: Source string.
  *
- * Return: dest duuhh;
+ * Return: Pointer to the destination string.
  */
 char *_strcpy(char *dest, char *src)
 {
-    int i = 0;
-    
-    while (src[i])
-    {
-        dest[i] = src[i];
-        i++; 
-    }
-    dest[i] = '\0';
-    return (dest);
+	int i = 0;
+
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
