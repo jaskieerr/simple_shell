@@ -8,16 +8,12 @@
  */
 char **tokenizer(char *line)
 {
-    char *token = NULL, *tmpp = NULL;
-    char **command = NULL;
+    char *token = NULL, *tmpp = NULL;char **command = NULL;
     int count = 0, i = 0;
-
-    if (!line)
+	 if (!line)
         return (NULL);
-    
     tmpp = _strdup(line);
-
-    token = strtok(tmpp, DELIM);
+	token = strtok(tmpp, DELIM);
     if (token == NULL)
     {
         free(line);
@@ -33,16 +29,14 @@ char **tokenizer(char *line)
     }
     free(tmpp);
     tmpp = NULL;
-
-    command = malloc(sizeof(char *) * (count + 1));
+	command = malloc(sizeof(char *) * (count + 1));
     if (!command)
     {
         free(line);
         line = NULL;
         return (NULL);
     }
-
-    token = strtok(line, DELIM);
+	token = strtok(line, DELIM);
     while (token)
     {
         command[i] = _strdup(token);
