@@ -23,14 +23,12 @@ char **tokenizer(char *line)
 		free(tmpp), tmpp = NULL;
 		return (NULL);
 	}
-
 	while (token)
 	{
 		count++;
 		token = strtok(NULL, DELIM);
 	}
-
-	free(tmpp), tmpp = NULL;
+free(tmpp), tmpp = NULL;
 	command = malloc(sizeof(char *) * (count + 1));
 	if (!command)
 	{
@@ -50,4 +48,3 @@ char **tokenizer(char *line)
 	command[i] = NULL;
 	return (command);
 }
-

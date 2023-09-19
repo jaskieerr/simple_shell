@@ -65,3 +65,4 @@ void out_env(char **command, int status)
 	}
 	freestrsarr(command);
 }
+
