@@ -28,6 +28,9 @@ int main(int ac, char **argv)
 		if (!command)
 			continue;
 
+		if(builtin_check(command[0]))
+			builtin_hnd(command, argv, status, ind);
+		else	
 		status = _execute(command, argv, ind);
 	}
 

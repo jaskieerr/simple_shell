@@ -28,6 +28,8 @@ void out_error(char *nombre, char *command, int ind);
 char *_gitenvi(char *varr);
 char *_fetchpath(char *command);
 
+void exitin(char **command, int status);
+
 char *_itoa(int n);
 void rev_str(char *str, int len);
 
@@ -40,6 +42,11 @@ void tokenize_line(char *line, char **command);
 
 int count_tokens(char *line);
 char **allocate_command_array(int count);
+
+void exitin(char **command, int status);
+int builtin_check(char *command);
+void builtin_hnd(char **command,char **argv,int status,int ind);
+void out_env(char **command, int status);
 
 
 
